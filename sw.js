@@ -1,5 +1,5 @@
 /* Offline support. Pages and scripts are fetched fresh when online, and the saved copy is used when offline. Only files from this site are handled. */
-var CACHE="umrah-guide-v2";
+var CACHE="umrah-guide-v7";
 var FILES=["./","./index.html","./app.js","./sw-register.js","./manifest.webmanifest","./icon-192.png","./icon-512.png","./icon-maskable-512.png","./apple-touch-icon.png"];
 self.addEventListener("install",function(e){ e.waitUntil(caches.open(CACHE).then(function(c){ return c.addAll(FILES); }).then(function(){ return self.skipWaiting(); })); });
 self.addEventListener("activate",function(e){

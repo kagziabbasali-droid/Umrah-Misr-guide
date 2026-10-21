@@ -234,39 +234,39 @@ function build(s){
     duas:[du("seeKaba","When you first see the Ka'ba")],
     notes:["The longer dua on entering is in the booklet on pages 34 to 36. You can read it from there before starting Tawaf."]});
 
-  add({phase:3, title:"Start Tawaf: Black Stone and niyyah",
+  add({phase:3, title:"Start Tawaf: Black Stone (Hajar al-Aswad) and niyyah",
     lead:"Seven rounds around the Ka'ba, keeping the Ka'ba on your left.",
     actions:[
-      "Stand near the Black Stone, raise both hands and say the first dua.",
-      "Face the Black Stone and say the second dua.",
-      "Kiss the Black Stone and say the third dua. If the crowd is too heavy, touch it with your hand and wipe your face, or just point to it from afar.",
-      "Walk a little toward the Yamani corner until you cannot see the door of the Ka'ba, then stand with the Ka'ba on your left.",
+      "Stand near the Black Stone (Hajar al-Aswad), raise both hands and say the first dua.",
+      "Face the Black Stone (Hajar al-Aswad) and say the second dua.",
+      "Kiss the Black Stone (Hajar al-Aswad) and say the third dua. If the crowd is too heavy, touch it with your hand and wipe your face, or just point to it from afar.",
+      "Walk a little toward the Yamani corner (Rukn al-Yamani) until you cannot see the door of the Ka'ba, then stand with the Ka'ba on your left.",
       "Make the niyyah of Tawaf."
     ].concat(F? [] : ["Men: for the first three rounds, uncover the right shoulder."]),
     duas:[
-      du("hajarStart","At the Black Stone, hands raised"),
-      du("hajarFace","Facing the Black Stone"),
-      du("hajarTouch1","While kissing or touching the Black Stone"),
+      du("hajarStart","At the Black Stone (Hajar al-Aswad), hands raised"),
+      du("hajarFace","Facing the Black Stone (Hajar al-Aswad)"),
+      du("hajarTouch1","While kissing or touching the Black Stone (Hajar al-Aswad)"),
       M? du("tawM","Tawaf niyyah (Umrah Mufrada)") : du("tawT","Tawaf niyyah (Tamattu')")
     ].concat(tawNiyAll()),
-    notes:["<b>Which niyyah?</b> Use the first niyyah for your Umrah Tawaf. The Tahiyya and Tatawwu' niyyahs are for those separate tawafs, for yourself or on behalf of someone. After the niyyah, begin the Tawaf keeping the Ka'ba on your left.","Women should not push in the crowd to kiss the Black Stone, and it was not obligatory for women. Men should not crowd with women."]});
+    notes:["<b>Which niyyah?</b> Use the first niyyah for your Umrah Tawaf. The Tahiyya and Tatawwu' niyyahs are for those separate tawafs, for yourself or on behalf of someone. After the niyyah, begin the Tawaf keeping the Ka'ba on your left.","Women should not push in the crowd to kiss the Black Stone (Hajar al-Aswad), and it was not obligatory for women. Men should not crowd with women."]});
 
   for(var r=1;r<=7;r++){ add(roundStep(r,M,F)); }
 
   add({phase:3, title:"After the seventh round",
     lead:"Complete the Tawaf with these duas.",
     actions:[
-      "At the Black Stone, finish the seventh round with the dua below.",
-      "Go to the Multazam, between the Black Stone and the door of the Ka'ba. Place both hands and your chest, belly and cheek against the wall of the Ka'ba and say the dua.",
+      "At the Black Stone (Hajar al-Aswad), finish the seventh round with the dua below.",
+      "Go to the Multazam, between the Black Stone (Hajar al-Aswad) and the door of the Ka'ba. Place both hands and your chest, belly and cheek against the wall of the Ka'ba and say the dua.",
       "Cry and plead (tadarru') as you make your own duas, remember your sins and ask forgiveness.",
-      "Then at the Black Stone, kiss or touch it and say the dua given in the booklet on page 45, then the dua below."
+      "Then at the Black Stone (Hajar al-Aswad), kiss or touch it and say the dua given in the booklet on page 45, then the dua below."
     ],
     duas:[
-      du("qanni","At the Black Stone after the 7th round"),
+      du("qanni","At the Black Stone (Hajar al-Aswad) after the 7th round"),
       du("multazam","At the Multazam"),
-      du("hajar48","At the Black Stone, after the Multazam")
+      du("hajar48","At the Black Stone (Hajar al-Aswad), after the Multazam")
     ],
-    notes:["The dua at the Black Stone on page 45 of the booklet begins \"Allahumma innaka ta'lamu sirri wa 'alaniyati...\". Read it from the booklet."]});
+    notes:["The dua at the Black Stone (Hajar al-Aswad) on page 45 of the booklet begins \"Allahumma innaka ta'lamu sirri wa 'alaniyati...\". Read it from the booklet."]});
 
   add({phase:3, title:"Two rak'at behind Maqam Ibrahim",
     lead:"The prayer of Tawaf.",
@@ -297,7 +297,7 @@ function build(s){
     lead:"Seven legs between Safa and Marwa. You start at Safa and finish at Marwa.",
     actions:[
       "Leave Masjid al-Haram through Bab al-Safa (the booklet says to use the last arch on your left as you go out), and walk to the hill of Safa.",
-      "Go up the little hill of Safa and stand facing the Ka'ba (the Black Stone side).",
+      "Go up the little hill of Safa and stand facing the Ka'ba (the Black Stone (Hajar al-Aswad) side).",
       "Make the niyyah of Sa'i.",
       "Raise your hands and say the first dua, then recite Al-Hamd, Qul a'udhu birabbin-nas, Qul a'udhu birabbil-falaq, Qul huwallahu ahad, and Ayat al-Kursi.",
       "Then say the takbir dua three times, and finally the last dua."
@@ -400,7 +400,7 @@ function buildDaily(s){
       "Be in wudu. Tawaf cannot be done without wudu.",
       "Enter Masjid al-Haram. When you first see the Ka'ba, stop and say the dua below.",
       "On entering Masjid al-Haram, the first tawaf you do is the Tahiyya Tawaf. After that you may do Tatawwu' Tawaf, as many as you wish.",
-      setNo? "This guide is set to Ad'iyat al-Tawaf, Set " + setNo + ". You will say a short dua at the Black Stone, and read this set's dua for each round from the booklet." : "This guide is set to the corner duas (booklet pages 9 to 14). They are written in full in each round."
+      setNo? "This guide is set to Ad'iyat al-Tawaf, Set " + setNo + ". You will say a short dua at the Black Stone (Hajar al-Aswad), and read this set's dua for each round from the booklet." : "This guide is set to the corner duas (booklet pages 9 to 14). They are written in full in each round."
     ],
     duas:[du("seeKaba","When you see the Ka'ba")],
     notes:[
@@ -411,7 +411,7 @@ function buildDaily(s){
   add({phase:1, title:"Niyyah of Tawaf",
     lead:"Choose the niyyah for the tawaf you are about to do.",
     actions:[
-      "Walk from the Black Stone a little toward the Yamani corner, to the place where you can no longer see the door of the Ka'ba.",
+      "Walk from the Black Stone (Hajar al-Aswad) a little toward the Yamani corner (Rukn al-Yamani), to the place where you can no longer see the door of the Ka'ba.",
       "Stand there with the Ka'ba on your left.",
       "Say the niyyah that matches your tawaf: Tahiyya or Tatawwu', for yourself or on behalf of someone.",
       "After the niyyah, begin the tawaf with the Ka'ba on your left."
@@ -425,16 +425,16 @@ function buildDaily(s){
     add({phase:2, title:"After the seventh round",
       lead:"Finish the tawaf with these duas.",
       actions:[
-        "At the Black Stone, finish the seventh round: kiss it, touch it, or point to it, and say the first dua.",
-        "Go to the Multazam, between the Black Stone and the door of the Ka'ba. Place your hands, chest, belly and cheek on the wall of the Ka'ba and say the dua.",
+        "At the Black Stone (Hajar al-Aswad), finish the seventh round: kiss it, touch it, or point to it, and say the first dua.",
+        "Go to the Multazam, between the Black Stone (Hajar al-Aswad) and the door of the Ka'ba. Place your hands, chest, belly and cheek on the wall of the Ka'ba and say the dua.",
         "Cry and plead as you make your own duas. Remember your sins and ask forgiveness from Allah.",
         "Then ask for whatever you need.",
-        "At the Black Stone again, kiss it or touch it, and say the last dua (booklet page 14)."
+        "At the Black Stone (Hajar al-Aswad) again, kiss it or touch it, and say the last dua (booklet page 14)."
       ],
       duas:[
-        du("qanni","At the Black Stone after the 7th round"),
+        du("qanni","At the Black Stone (Hajar al-Aswad) after the 7th round"),
         du("multazam","At the Multazam"),
-        du("sirri","At the Black Stone, last dua")
+        du("sirri","At the Black Stone (Hajar al-Aswad), last dua")
       ],
       notes:[]});
   } else {
@@ -442,7 +442,7 @@ function buildDaily(s){
     add({phase:2, title:"After the seventh round",
       lead:"Finish the tawaf at the Multazam.",
       actions:[
-        "When the seventh round is complete, go to the Multazam, between the Black Stone and the door of the Ka'ba.",
+        "When the seventh round is complete, go to the Multazam, between the Black Stone (Hajar al-Aswad) and the door of the Ka'ba.",
         "Read the Multazam dua of Set " + setNo + " from the booklet: " + bk(S3.multazam) + ".",
         "Cry and plead as you make your own duas and ask forgiveness from Allah."
       ],
@@ -476,8 +476,15 @@ function buildDaily(s){
   return st;
 }
 
-/* ---------- Farewell (Wada') Tawaf: only what is on booklet pages 108 to 114 (viewer pages 104 to 110) ---------- */
 function buildWada(s){
+  var d = buildDaily(s), w = buildWadaOnly(s), off = PHASES_D.length;
+  var lastD = d[d.length-1]; lastD.finish = false;
+  lastD.notes = (lastD.notes||[]).concat(["Next: the Wada' Tawaf (farewell) duas continue in the steps that follow."]);
+  w.forEach(function(x){ x.phase += off; });
+  return d.concat(w);
+}
+/* ---------- Farewell (Wada') Tawaf: only what is on booklet pages 108 to 114 (viewer pages 104 to 110) ---------- */
+function buildWadaOnly(s){
   var st = [];
   function add(o){ st.push(o); }
   add({phase:0, title:"Niyyah of the Wada' Tawaf",
@@ -539,62 +546,62 @@ function buildWada(s){
 
 function dailyRound(r, style, setNo){
   var acts = [
-    "Start at the Black Stone: kiss it, touch it, or point to it, and say the first dua.",
+    "Start at the Black Stone (Hajar al-Aswad): kiss it, touch it, or point to it, and say the first dua.",
     "Walk around the Ka'ba with the Ka'ba on your left. Go outside Hijr Ismail, never through it."
   ];
-  var duas = [du("roundStart","At the Black Stone")];
+  var duas = [du("roundStart","At the Black Stone (Hajar al-Aswad)")];
   var notes = [];
 
   if(!setNo){
     acts.push("Say each dua below when you reach that spot.");
     duas.push(du("bab","Facing the door of the Ka'ba"));
-    duas.push(du("iraqi","At the Iraqi corner"));
+    duas.push(du("iraqi","At the Iraqi corner (Rukn al-Iraqi)"));
     duas.push(du("mizab","Under the Mizab (rain spout)"));
-    duas.push(du("shami","At the Shami corner"));
+    duas.push(du("shami","At the Shami corner (Rukn al-Shami)"));
     if(r===7) duas.push(du("mustajar","At the Mustajar (7th round only)","Mustajar is on the back wall, opposite the door. In the 7th round, place both hands and your chest, belly and cheek on the wall and say this dua. Then cry and plead as you ask forgiveness for your sins."));
-    duas.push(du("yamani","At the Yamani corner","Touch it if you can; if not, keep walking."));
-    duas.push(du("between","Between the Yamani corner and the Black Stone"));
-    if(r===1) notes.push("These are the same duas in every round (booklet pages 9 to 12). Each round starts and ends at the Black Stone.");
+    duas.push(du("yamani","At the Yamani corner (Rukn al-Yamani)","Touch it if you can; if not, keep walking."));
+    duas.push(du("between","Between the Yamani corner (Rukn al-Yamani) and the Black Stone (Hajar al-Aswad)"));
+    if(r===1) notes.push("These are the same duas in every round (booklet pages 9 to 12). Each round starts and ends at the Black Stone (Hajar al-Aswad).");
   } else {
     var S3 = SETS[setNo];
     var startPg = S3.rounds[r-1];
-    acts.push("At the Yamani corner, kiss or touch it and say Bismillah Allahu akbar.");
+    acts.push("At the Yamani corner (Rukn al-Yamani), kiss or touch it and say Bismillah Allahu akbar.");
     acts.push("Then read the dua of Set " + setNo + ", round " + r + ", from the booklet while you walk. It starts on " + bk(startPg) + " and runs until the next round heading.");
     acts.push("Finish this round's dua before the round ends.");
-    duas.push(du("bism","At the Yamani corner"));
+    duas.push(du("bism","At the Yamani corner (Rukn al-Yamani)"));
     if(r===7){
       acts.push("In the 7th round, also read the Mizab dua from " + bk(S3.mizab) + ", and the Mustajar dua from " + bk(S3.mustajar) + ". At the Mustajar, place your hands, chest and cheek on the wall of the Ka'ba.");
     }
     if(r===1) notes.push("<b>How the sets work:</b> Syedna Taher Saifuddin composed 3 sets of 7 duas for Tawaf, one dua for each round. Use one set for each tawaf (booklet page 17). Page numbers here are the numbers shown in the PDF viewer. If a round heading is on the next page, follow the heading in the booklet.");
   }
-  if(r<7) acts.push("Back at the Black Stone, round " + r + " is complete.");
-  else acts.push("When you reach the Black Stone, round 7 is complete. The next step has the closing duas.");
+  if(r<7) acts.push("Back at the Black Stone (Hajar al-Aswad), round " + r + " is complete.");
+  else acts.push("When you reach the Black Stone (Hajar al-Aswad), round 7 is complete. The next step has the closing duas.");
   return {phase:2, title:"Round " + r + " of 7", round:r, total:7, lead: r===1? "Begin your first round." : "Begin round " + r + ".", actions:acts, duas:duas, notes:notes};
 }
 
 function roundStep(r,M,F){
   var acts = [
-    "Start at the Black Stone: kiss it, touch it, or point to it, and say the first dua.",
+    "Start at the Black Stone (Hajar al-Aswad): kiss it, touch it, or point to it, and say the first dua.",
     "Walk around the Ka'ba with the Ka'ba on your left. Go outside Hijr Ismail, never through it. The closer to the Ka'ba you are, the better, if it is not crowded."
   ];
   if(!F){
-    if(r<=3) acts.push("Men: walk briskly (ramal) from the Black Stone to the Yamani corner, and walk calmly from the Yamani corner back to the Black Stone.");
+    if(r<=3) acts.push("Men: walk briskly (ramal) from the Black Stone (Hajar al-Aswad) to the Yamani corner (Rukn al-Yamani), and walk calmly from the Yamani corner (Rukn al-Yamani) back to the Black Stone (Hajar al-Aswad).");
     else acts.push("Men: walk at a normal, calm pace. Ramal is only for the first three rounds.");
   } else acts.push("Women: walk at a normal pace. Women do not do ramal.");
   acts.push("Say each dua below when you reach that spot.");
 
   var duas = [
-    du("roundStart","Start: at the Black Stone"),
+    du("roundStart","Start: at the Black Stone (Hajar al-Aswad)"),
     du("bab","Facing the door of the Ka'ba"),
-    du("iraqi","At the Iraqi corner"),
+    du("iraqi","At the Iraqi corner (Rukn al-Iraqi)"),
     du("mizab","Under the Mizab (rain spout)"),
-    du("shami","At the Shami corner")
+    du("shami","At the Shami corner (Rukn al-Shami)")
   ];
   if(r===7) duas.push(du("mustajar","At the Mustajar (7th round only)","Mustajar is on the back wall, opposite the door. In the 7th round, place both hands and your chest, belly and cheek on the wall here and say this dua. Then cry and plead as you ask forgiveness for your sins."));
-  duas.push(du("yamani","At the Yamani corner","Touch it if you can; if not, keep walking."));
-  duas.push(du("between","Between the Yamani corner and the Black Stone"));
-  if(r<7) acts.push("Back at the Black Stone, round " + r + " is complete.");
-  else acts.push("When you reach the Black Stone, round 7 is complete. The next step has the closing duas.");
+  duas.push(du("yamani","At the Yamani corner (Rukn al-Yamani)","Touch it if you can; if not, keep walking."));
+  duas.push(du("between","Between the Yamani corner (Rukn al-Yamani) and the Black Stone (Hajar al-Aswad)"));
+  if(r<7) acts.push("Back at the Black Stone (Hajar al-Aswad), round " + r + " is complete.");
+  else acts.push("When you reach the Black Stone (Hajar al-Aswad), round 7 is complete. The next step has the closing duas.");
 
   return {phase:3, title:"Round " + r + " of 7", round:r, total:7, lead: r===1? "Begin your first round." : "Begin round " + r + ".", actions:acts, duas:duas, notes:[]};
 }
@@ -652,7 +659,7 @@ function stopAll(){
   if(curUrl){ try{ URL.revokeObjectURL(curUrl); }catch(e){} curUrl=null; }
   document.querySelectorAll(".seg.on").forEach(function(e){ e.classList.remove("on"); });
   document.querySelectorAll(".play.on,.listenall.on").forEach(function(b){
-    b.classList.remove("on"); b.innerHTML = b.id==="listenAll" ? "&#9654; "+(b.getAttribute("data-label")||"Listen") : "&#9654; Listen";
+    b.classList.remove("on"); b.innerHTML = b.classList.contains("listenall") ? "&#9654; "+(b.getAttribute("data-label")||"Listen") : "&#9654; Listen";
   });
 }
 function pickVoice(){
@@ -679,11 +686,55 @@ function segSplit(t){
 function segHTML(text,isTr){
   return segSplit(text).map(function(s,k){ return '<span class="seg" data-s="'+k+'">'+(isTr?esc(s.t):s.t)+'</span>'+s.sep; }).join("");
 }
+/* Each phrase is cut into lines of at most 6 words. The same lines are used for the Arabic and the Latin, so the highlight
+   follows the line being read. */
+var MAXW=6;
+function wordsOf(t){ return t.split(/\s+/).filter(function(w){ return w; }); }
+function sizesFor(len){ var k=Math.ceil(len/MAXW), base=Math.floor(len/k), extra=len%k, out=[], i; for(i=0;i<k;i++) out.push(base+(i<extra?1:0)); return out; }
+function arParts(text){
+  var out=[], pid=0;
+  segSplit(text).forEach(function(s){
+    var w=wordsOf(s.t), star=false;
+    if(w.length && w[w.length-1]==="*"){ w.pop(); star=true; }
+    else if(w.length && /\*$/.test(w[w.length-1])){ w[w.length-1]=w[w.length-1].slice(0,-1); star=true; }
+    if(!w.length){ pid++; return; }
+    var sizes=sizesFor(w.length), p=0;
+    sizes.forEach(function(sz,ix){
+      var last=(ix===sizes.length-1), part=w.slice(p,p+sz); p+=sz;
+      out.push({t:part.join(" ")+(last&&star?" *":""), n:sz, words:part, sep:(last? s.sep : " "), ph:pid});
+    });
+    pid++;
+  });
+  return out;
+}
+function segHTMLAr(text){
+  return arParts(text).map(function(p,k){ return '<span class="seg" data-s="'+k+'">'+p.t+'</span>'+p.sep; }).join("");
+}
+function segHTMLTr(ar,tr){
+  var P=arParts(ar); if(!P.length) return segHTML(tr,true);
+  var PA=segSplit(ar), PL=segSplit(tr), res=[], i;
+  function toks(t){ return wordsOf(t.replace(/\s+\*/g,"*")); }
+  function alloc(tokens,idxs){
+    var tot=0, cum=0, from=0, m=tokens.length;
+    idxs.forEach(function(ix){ tot+=P[ix].n; });
+    idxs.forEach(function(ix,ii){ cum+=P[ix].n; var to=(ii===idxs.length-1)? m : Math.round(m*cum/tot); res[ix]=tokens.slice(from,to); from=to; });
+  }
+  if(PA.length===PL.length){
+    var byPh={}; P.forEach(function(p,ix){ (byPh[p.ph]=byPh[p.ph]||[]).push(ix); });
+    Object.keys(byPh).forEach(function(ph){ alloc(toks(PL[+ph].t), byPh[ph]); });
+  } else {
+    alloc(toks(tr), P.map(function(p,ix){ return ix; }));
+  }
+  return P.map(function(p,k){
+    var t=(res[k]||[]).map(function(w){ var st=/\*$/.test(w); return esc(st? w.slice(0,-1) : w)+(st?" *":""); }).join(" ");
+    return '<span class="seg" data-s="'+k+'">'+t+'</span>'+p.sep;
+  }).join("");
+}
 function unitsOf(text){
   var units=[], cur=null;
-  segSplit(text).forEach(function(s,k){
-    if(cur && cur.text.length<45 && cur.text.length+1+s.t.length<=190){ cur.text+=" "+s.t; cur.to=k; }
-    else { cur={text:s.t,from:k,to:k}; units.push(cur); }
+  arParts(text).forEach(function(p,k){
+    if(cur && cur.n<3 && cur.n+p.n<=10){ cur.text+=" "+p.words.join(" "); cur.n+=p.n; cur.to=k; }
+    else { cur={text:p.words.join(" "),n:p.n,from:k,to:k}; units.push(cur); }
   });
   return units;
 }
@@ -712,6 +763,7 @@ function playDua(x, done, fail, hl){
     u.onstart=function(){ started=true; if(hl && my===tok) hl(un.from,un.to); };
     u.onend=next;
     u.onerror=function(e){ if(my!==tok) return; if(e && (e.error==="canceled"||e.error==="interrupted")) return; fail("Could not read aloud on this device. Install an Arabic voice in your phone settings, or use Add recording."); };
+    if(hl && my===tok) hl(un.from,un.to);
     speechSynthesis.speak(u);
   }
   try{ if(speechSynthesis.speaking||speechSynthesis.pending) speechSynthesis.cancel(); }catch(e){}
@@ -725,16 +777,20 @@ function hlFor(i){
   return function(from,to){
     art.querySelectorAll(".seg.on").forEach(function(e){ e.classList.remove("on"); });
     if(from<0) return;
+    var latin = !document.body.classList.contains("no-tr") && L.length>0;   // the text on top is the one that is highlighted
+    var P = latin ? L : A, first=null;
     for(var k=from;k<=to;k++){
-      if(A[k]) A[k].classList.add("on");
-      if(L.length){ var j=(L.length===A.length)? k : Math.round(k*(L.length-1)/Math.max(1,A.length-1)); if(L[j]) L[j].classList.add("on"); }
+      var j = latin ? (L.length===A.length ? k : Math.round(k*(L.length-1)/Math.max(1,A.length-1))) : k;
+      if(P[j]){ P[j].classList.add("on"); if(!first) first=P[j]; }
     }
-    var el=A[from]; if(el){ var r=el.getBoundingClientRect(); var hb=(document.querySelector("header.top")||{}).offsetHeight||110; if(r.top<hb+20||r.bottom>window.innerHeight-130){ try{ el.scrollIntoView({block:"center",behavior:"smooth"}); }catch(e){} } }
+    if(first){ var r=first.getBoundingClientRect(); var hb=(document.querySelector("header.top")||{}).offsetHeight||110;
+      if(r.top<hb+20||r.bottom>window.innerHeight-170){ try{ first.scrollIntoView({block:"center",behavior:"smooth"}); }catch(e){} } }
   };
 }
 function wireSpeed(){
-  var b=document.getElementById("speedBtn"); if(!b) return;
-  b.onclick=function(){ nextRate(); b.textContent="Speed "+rateName(); };
+  document.querySelectorAll(".speedbtn").forEach(function(b){
+    b.onclick=function(){ nextRate(); document.querySelectorAll(".speedbtn").forEach(function(x){ x.textContent = x.getAttribute("data-short") ? rateName() : "Speed "+rateName(); }); };
+  });
 }
 function wireAudio(st){
   st.duas.forEach(function(x){
@@ -770,26 +826,11 @@ function wireAudio(st){
     };
     rm.onclick=function(){ delRec(key,function(){ recMap[key]=null; refreshTags(st); show("Recording removed."); }); };
   });
-  var all=document.getElementById("listenAll");
-  if(all) all.onclick=function(){
-    if(all.classList.contains("on")){ stopAll(); return; }
-    stopAll();
-    all.classList.add("on"); all.innerHTML="&#9632; Stop";
-    var n=0, my=tok;
-    function endAll(){ all.classList.remove("on"); all.innerHTML="&#9654; "+(all.getAttribute("data-label")||"Listen"); }
-    function go(){
-      if(my!==tok) return;
-      if(n>=st.duas.length){ endAll(); return; }
-      var di=n++, x=st.duas[di];
-      playDua(x, go, function(m){ endAll(); var el=document.querySelector(".amsg"); if(el){ el.textContent=m; el.hidden=false; } }, hlFor(di));
-    }
-    go();
-  };
 }
 
 var PHASES = ["Miqat","Ihram","Makkah","Tawaf","Sa'i","Halq"];
 PHASES = ["Miqat and Ihram","Ihram and Talbiyah","Enter Makkah","Tawaf","Sa'i","Finish"];
-function PH(){ var g=MGd()[S.mode]; if(g) return g.phases; return S.mode==="daily"? PHASES_D : (S.mode==="wada"? PHASES_W : PHASES); }
+function PH(){ var g=MGd()[S.mode]; if(g) return g.phases; return S.mode==="daily"? PHASES_D : (S.mode==="wada"? PHASES_D.concat(PHASES_W.map(function(n){ return "Wada' "+n; })) : PHASES); }
 
 /* ---------- rendering ---------- */
 var app = document.getElementById("app");
@@ -813,7 +854,7 @@ function renderMakkahHome(){
   var h = '<div class="wrap home">'+'<p class="backrow"><button class="chip" id="mk-back">&#8249; Makkah and Madina</button></p>'+
     '<p class="mark" lang="ar" dir="rtl">'+(wada?'طواف الوداع':(daily?'الطواف':'العمرة'))+'</p>'+
     '<h1>'+(wada?'Farewell Tawaf step by step':(daily?'Daily Tawaf step by step':'Umrah step by step'))+'</h1>'+
-    '<p class="sub">'+(wada?'The Wada\' Tawaf before you leave Makkah, with the farewell duas. Based on the Mansak for Makkah that you shared.':daily?'Tahiyya and Tatawwu\' Tawaf. Do each round, read the dua, then tap done to move on. Based on the Mansak for Makkah that you shared.':'Follow each stage in order. Do the actions, read the dua, then tap done to move on. Based on the Umrah booklet you shared.')+'</p>'+
+    '<p class="sub">'+(wada?'Do the rounds of the tawaf like the Daily Tawaf, then continue with the Wada\' farewell duas before you leave Makkah. Based on the Mansak for Makkah that you shared.':daily?'Tahiyya and Tatawwu\' Tawaf. Do each round, read the dua, then tap done to move on. Based on the Mansak for Makkah that you shared.':'Follow each stage in order. Do the actions, read the dua, then tap done to move on. Based on the Umrah booklet you shared.')+'</p>'+
     '<fieldset><legend>What would you like to do?</legend><div class="opt">'+
       radio("mode","umrah",S.mode,"Umrah only","The full Umrah: Ihram, Tawaf, Sa\'i and coming out of Ihram.")+
       radio("mode","daily",S.mode,"Daily Tawaf","Tahiyya or Tatawwu\' Tawaf around the Ka\'ba, with the Tawaf prayer.")+
@@ -872,11 +913,10 @@ function headerHTML(st){
       '<button class="chip" id="b-tr" aria-pressed="'+(S.tr?'true':'false')+'">Latin</button>'+
       '<button class="chip" id="b-sm" aria-label="Smaller text">A−</button>'+
       '<button class="chip" id="b-lg" aria-label="Larger text">A+</button>'+
-      '<button class="chip" id="b-list">Steps</button>'+
+      (st.duas&&st.duas.length? '<button class="chip speedbtn" id="speedBtn" data-short="1" aria-label="Reading speed, tap to change">'+rateName()+'</button>' : '')+'<button class="chip" id="b-list">Steps</button>'+
     '</span></div>'+
     '<div class="phases" aria-hidden="true">'+segs+'</div>'+
-    '<div class="phase-label"><span>'+PH()[st.phase]+'</span><span>Step '+(S.i+1)+' of '+steps.length+'</span></div>'+
-    (st.duas&&st.duas.length? '<div class="audiobar"><button class="chip listenall" id="listenAll" data-label="'+(st.duas.length>1?'Listen to all':'Listen')+'">&#9654; '+(st.duas.length>1?'Listen to all':'Listen')+'</button><button class="chip" id="speedBtn" aria-label="Reading speed">Speed '+rateName()+'</button></div>' : '')+
+    '<div class="phase-label"><span>'+PH()[st.phase]+(st.round? ' &middot; '+roundNoun(st)+' '+st.round+' of '+st.total : '')+'</span><span>Step '+(S.i+1)+' of '+steps.length+'</span></div>'+
   '</div></header>';
 }
 function phaseFrac(st){
@@ -885,6 +925,18 @@ function phaseFrac(st){
   return (S.i-first+1)/(last-first+1);
 }
 
+function roundNoun(st){ return st.roundLabel ? st.roundLabel : (st.title.indexOf("Leg")===0 ? "Leg" : "Round"); }
+function roundGroup(i){
+  var t=steps[i].total, from=i, to=i;
+  while(from>0 && steps[from-1].round && steps[from-1].total===t) from--;
+  while(to<steps.length-1 && steps[to+1].round && steps[to+1].total===t) to++;
+  return {from:from,to:to};
+}
+function wireRounds(){
+  document.querySelectorAll(".rpick button").forEach(function(b){
+    b.onclick=function(){ var j=parseInt(b.getAttribute("data-j"),10); if(j<0) return; stopAll(); S.i=j; save(); renderStep(); };
+  });
+}
 var DONE={}, lockFn=null;
 /* The Next/Done button stays locked until you have scrolled to the end of the step, so a stray tap cannot skip a step or round. */
 function lockNext(){
@@ -910,10 +962,13 @@ function renderStep(){
     body += '<p class="eyebrow">'+PH()[st.phase]+'</p><h1 class="t">'+esc(st.title)+'</h1><p class="lead">'+esc(st.lead)+'</p>';
   }
   if(st.round){
-    body += '<div class="rounds" role="img" aria-label="'+st.round+' of '+st.total+'">';
-    for(var q=1;q<=st.total;q++) body += '<i class="'+(q<st.round?'on':(q===st.round?'now':''))+'"></i>';
-    body += '</div>';
-    if(st.roundLabel) body += '<p class="rcap">'+esc(st.roundLabel)+' '+st.round+' of '+st.total+(st.round>1?' &middot; '+(st.round-1)+' done':'')+'</p>';
+    var rg=roundGroup(S.i), rtab='';
+    for(var q=1;q<=st.total;q++){
+      var ri=-1; for(var jj=rg.from;jj<=rg.to;jj++){ if(steps[jj].round===q){ ri=jj; break; } }
+      rtab += '<button class="'+(q<st.round?'on':(q===st.round?'now':''))+'" data-j="'+ri+'"'+(ri<0?' disabled':'')+' aria-label="Go to '+roundNoun(st).toLowerCase()+' '+q+'"'+(q===st.round?' aria-current="true"':'')+'>'+q+'</button>';
+    }
+    body += '<div class="rpick" role="group" aria-label="Choose a '+roundNoun(st).toLowerCase()+'">'+rtab+'</div>';
+    body += '<p class="rcap">'+roundNoun(st)+' '+st.round+' of '+st.total+(st.round>1?' &middot; '+(st.round-1)+' done':'')+' &middot; tap a number to repeat or skip to it</p>';
   }
   if(st.actions.length){
     body += '<h2 class="s">What to do</h2><ol class="do">'+st.actions.map(function(a){return '<li>'+esc(a)+'</li>';}).join("")+'</ol>';
@@ -921,7 +976,7 @@ function renderStep(){
   if(st.duas.length){
     body += '<div class="dhead"><h2 class="s">Dua to read</h2></div>';
     st.duas.forEach(function(x,di){
-      body += '<article class="dua"><h3>'+esc(x.title)+'</h3><p class="ar" lang="ar" dir="rtl">'+segHTML(x.ar,false)+'</p><p class="tr" lang="en">'+segHTML(x.tr,true)+'</p>'+(x.note?'<p class="dnote">'+esc(x.note)+'</p>':'')+
+      body += '<article class="dua"><h3>'+esc(x.title)+'</h3><p class="ar" lang="ar" dir="rtl">'+segHTMLAr(x.ar)+'</p><p class="tr" lang="en">'+segHTMLTr(x.ar,x.tr)+'</p>'+(x.note?'<p class="dnote">'+esc(x.note)+'</p>':'')+
       '<div class="audio" data-i="'+di+'"><button class="chip play" aria-label="Listen to this dua">&#9654; Listen</button>'+
       '<label class="chip">Add recording<input type="file" accept="audio/*" hidden></label>'+
       '<button class="chip rm" hidden>Remove mine</button><span class="tag" hidden>Your recording</span></div><p class="amsg" hidden></p></article>';
@@ -934,16 +989,18 @@ function renderStep(){
   body += '</div></main>';
 
   var last = S.i===steps.length-1;
-  var label = last? "Start over" : (st.round? (st.round===st.total? "Done. Next step" : "Round done. Next") : "Done. Next step");
+  var label = last? "Start over" : (st.round? (st.round===st.total? "Done. Next step" : (st.roundLabel? "Station done. Next" : "Round done. Next")) : "Done. Next step");
   if(st.round && S.type && st.title.indexOf("Leg")===0) label = st.round===st.total? "Sa'i complete. Next" : "Leg done. Next";
-  var bar = '<footer class="bar"><div class="wrap">'+
-    '<button class="btn ghost" id="back"'+(S.i===0?' disabled style="opacity:.4"':'')+'>Back</button>'+
+  var hasSp = !!(st.duas && st.duas.length);
+  var bar = '<footer class="bar"><div class="wrap'+(hasSp?' has-speed':'')+'">'+
+    '<button class="btn ghost" id="back"'+(S.i===0?' disabled style="opacity:.4"':'')+'>Back</button>'+(hasSp?'<button class="chip speedbtn" aria-label="Reading speed">Speed '+rateName()+'</button>':'')+
     '<button class="btn" id="next">'+label+'</button></div></footer>';
 
   app.innerHTML = h + body + bar;
   window.scrollTo(0,0);
   wireAudio(st);
   wireSpeed();
+  wireRounds();
   lockNext();
 
   document.getElementById("next").onclick=function(){
