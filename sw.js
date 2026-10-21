@@ -1,0 +1,18 @@
+/* Offline support. Pages and scripts are fetched fresh when online, and the saved copy is used when offline. Only files from this site are handled. */
+var CACHE="umrah-guide-v2";
+var FILES=["./","./index.html","./app.js","./sw-register.js","./manifest.webmanifest","./icon-192.png","./icon-512.png","./icon-maskable-512.png","./apple-touch-icon.png"];
+self.addEventListener("install",function(e){ e.waitUntil(caches.open(CACHE).then(function(c){ return c.addAll(FILES); }).then(function(){ return self.skipWaiting(); })); });
+self.addEventListener("activate",function(e){
+  e.waitUntil(caches.keys().then(function(ks){ return Promise.all(ks.filter(function(k){ return k!==CACHE; }).map(function(k){ return caches.delete(k); })); }).then(function(){ return self.clients.claim(); }));
+});
+self.addEventListener("fetch",function(e){
+  var req=e.request; if(req.method!=="GET") return;
+  var url=new URL(req.url); if(url.origin!==self.location.origin) return;
+  var fresh = req.mode==="navigate" || /\.(html|js|webmanifest)$/.test(url.pathname) || url.pathname.slice(-1)==="/";
+  if(fresh){
+    e.respondWith(fetch(req).then(function(r){ if(r && r.ok){ var copy=r.clone(); caches.open(CACHE).then(function(c){ c.put(req.mode==="navigate" ? "./index.html" : req, copy); }); } return r; })
+      .catch(function(){ return caches.match(req.mode==="navigate" ? "./index.html" : req).then(function(h){ return h || caches.match("./index.html"); }); }));
+  } else {
+    e.respondWith(caches.match(req).then(function(hit){ return hit || fetch(req).then(function(r){ if(r && r.ok){ var copy=r.clone(); caches.open(CACHE).then(function(c){ c.put(req,copy); }); } return r; }); }));
+  }
+});
