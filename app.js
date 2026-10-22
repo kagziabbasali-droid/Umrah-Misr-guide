@@ -932,6 +932,16 @@ function roundGroup(i){
   while(to<steps.length-1 && steps[to+1].round && steps[to+1].total===t) to++;
   return {from:from,to:to};
 }
+function wirePics(){
+  document.querySelectorAll(".pic img").forEach(function(im){
+    im.onclick=function(){
+      var o=document.createElement("div"); o.className="lb"; o.setAttribute("role","dialog"); o.setAttribute("aria-label","Enlarged picture. Tap to close.");
+      var c=document.createElement("img"); c.src=im.src; c.alt=im.alt; o.appendChild(c);
+      o.onclick=function(){ if(o.parentNode) o.parentNode.removeChild(o); };
+      document.body.appendChild(o);
+    };
+  });
+}
 function wireRounds(){
   document.querySelectorAll(".rpick button").forEach(function(b){
     b.onclick=function(){ var j=parseInt(b.getAttribute("data-j"),10); if(j<0) return; stopAll(); S.i=j; save(); renderStep(); };
@@ -970,6 +980,7 @@ function renderStep(){
     body += '<div class="rpick" role="group" aria-label="Choose a '+roundNoun(st).toLowerCase()+'">'+rtab+'</div>';
     body += '<p class="rcap">'+roundNoun(st)+' '+st.round+' of '+st.total+(st.round>1?' &middot; '+(st.round-1)+' done':'')+' &middot; tap a number to repeat or skip to it</p>';
   }
+  if(st.img){ body += '<figure class="pic"><img src="'+st.img+'" alt="'+esc(st.imgAlt||'')+'"><figcaption>'+esc(st.imgCap||'')+' Tap the picture to enlarge it.</figcaption></figure>'; }
   if(st.actions.length){
     body += '<h2 class="s">What to do</h2><ol class="do">'+st.actions.map(function(a){return '<li>'+esc(a)+'</li>';}).join("")+'</ol>';
   }
@@ -1001,6 +1012,7 @@ function renderStep(){
   wireAudio(st);
   wireSpeed();
   wireRounds();
+  wirePics();
   lockNext();
 
   document.getElementById("next").onclick=function(){
@@ -1051,7 +1063,7 @@ document.addEventListener("keydown",function(e){ if(e.key==="Escape") document.g
 var MGc=null;
 function MGd(){ if(!MGc){ try{ MGc=JSON.parse(document.getElementById("madina-data").textContent); }catch(e){ MGc={}; } } return MGc; }
 function buildMadina(id){
-  return MGd()[id].steps.map(function(x){ var o={phase:x.phase,title:x.title,lead:x.lead||"",actions:x.actions||[],duas:x.duas||[],notes:x.notes||[],finish:!!x.finish}; if(x.round){ o.round=x.round; o.total=x.total; o.roundLabel=x.roundLabel; } return o; });
+  return MGd()[id].steps.map(function(x){ var o={phase:x.phase,title:x.title,lead:x.lead||"",actions:x.actions||[],duas:x.duas||[],notes:x.notes||[],finish:!!x.finish}; if(x.round){ o.round=x.round; o.total=x.total; o.roundLabel=x.roundLabel; } if(x.img){ o.img=x.img; o.imgAlt=x.imgAlt; o.imgCap=x.imgCap; } return o; });
 }
 var MORDER=["nabawi","baqi","mosques","juhfa"];
 function renderHome(){
@@ -1063,6 +1075,7 @@ function renderHome(){
     '<button class="secard" id="go-makkah"><span class="ar2" lang="ar" dir="rtl">مكة</span><b>Makkah</b><small>Umrah, daily Tawaf and the farewell Tawaf, step by step with the duas.</small></button>'+
     '<button class="secard" id="go-madina"><span class="ar2" lang="ar" dir="rtl">المدينة</span><b>Madina</b><small>Masjid-un-Nabawi, Jannat al-Baqi, the mosques of Madinah and Uhud, and Juhfa and Masjid Shajarah. Step by step with the duas.</small></button>'+
     '<p class="fine">Always check the Arabic against your booklet. The Latin letters are only to help you read quickly. Your progress is saved on this device. &copy; All rights reserved. Please do not copy, change or republish this guide without permission.</p>'+
+    '<p class="fine">Version 9</p>'+
   '</div>';
   document.getElementById("go-makkah").onclick=function(){
     if(["umrah","daily","wada"].indexOf(S.mode)<0){ S.mode="umrah"; }
